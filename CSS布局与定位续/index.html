@@ -58,7 +58,7 @@
       <div class="userCard">
         <div class="pictureAndText clearfix">
           <div class="picture">
-            <img src="./img/avatar.jpg" alt="头像">
+            <img src="./img/avatar.jpg" width="auto" height="347" alt="头像">
           </div>
           <div class="profile">
             <span class="welcome">Hello
@@ -114,7 +114,7 @@
         </footer>
       </div>
       <div class="introduce">
-        <a class="button" href="./download/简历.pdf"download target="_blank">下载 PDF 简历</a>
+        <a class="button" href="./download/简历.pdf" download target="_blank">下载 PDF 简历</a>
 
         <p>
           胡亚民， 资深前端工程师。
@@ -122,34 +122,80 @@
         </p>
       </div>
     </main>
-    <section>
+    <section class="skills">
       <h2>技能</h2>
-      <ol>
-        <li>HTML 5 &amp; CSS 3</li>
-        <li>JavaScript</li>
-        <li>jQuery</li>
-        <li>Vue</li>
-        <li>React</li>
-        <li>HTTP</li>
+      <ol class="clearfix">
+        <li>
+          <h3>HTML 5 &amp; CSS 3</h3>
+          <div class="skillsbox1">
+            <div class="skillsbox2" style="width: 80%;"></div>
+          </div>
+        </li>
+        <li>
+          <h3>JavaScript</h3>
+          <div class="skillsbox1">
+            <div class="skillsbox2" style="width: 70%;"></div>
+          </div>
+        </li>
+        <li>
+          <h3>jQuery</h3>
+          <div class="skillsbox1">
+            <div class="skillsbox2" style="width: 65%;"></div>
+          </div>
+        </li>
+        <li>
+          <h3>Vue</h3>
+          <div class="skillsbox1">
+            <div class="skillsbox2" style="width: 68%;"></div>
+          </div>
+        </li>
+        <li>
+          <h3>React</h3>
+          <div class="skillsbox1">
+            <div class="skillsbox2" style="width: 78%;"></div>
+          </div>
+        </li>
+        <li>
+          <h3>HTTP</h3>
+          <div class="skillsbox1">
+            <div class="skillsbox2" style="width: 90%;"></div>
+          </div>
+        </li>
       </ol>
     </section>
-    <section>
+    <section class="production">
       <h2>作品集</h2>
       <nav>
-        <ol>
-          <li>所有</li>
-          <li>框架</li>
-          <li>原生JS&amp;CSS</li>
-        </ol>
+        <div class="productionHeaderAll">
+          <ol class="clearfix">
+            <li id="production1">所有</li>
+            <li id="production2" style="margin: 0 40px;">框架</li>
+            <li id="production3">原生JS&amp;CSS</li>
+          </ol>
+          <div id="productionHeader1" class="box bate1">
+            <div class="productionHeader2" style="transition: all 0.3s;"></div>
+          </div>
+        </div>
       </nav>
 
       <div class="jobs">
-        <div class="big"></div>
-        <div class="small"></div>
-        <div class="small"></div>
+        <div class="big"><img src="./img/作品1.png" alt="big"></div>
+            <div class="small1"><img src="./img/作品2.png" alt="small1"></div>
+            <div class="small2"><img src="./img/作品3.png" alt="small2"></div>
       </div>
 
     </section>
   </body>
+  <script>
+    production1.onclick = function () {
+      productionHeader1.className = 'box bate1'
+    }
+    production2.onclick = function () {
+      productionHeader1.className = 'box bate2'
+    }
+    production3.onclick = function () {
+      productionHeader1.className = 'box bate3'
+    }
+  </script>
 
 </html>
