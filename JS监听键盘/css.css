@@ -2,7 +2,7 @@
 a{text-decoration: none;}
 kbd{position:relative;border: 1px red solid; width: 4em;height: 4em;display: inline-block;text-transform: uppercase;}
 main{text-align: center;}
-#nainx div:nth-child{display: inline-block;}
+#mainx div:nth-child{display: inline-block;}
 #mainx div:nth-child(2){margin-left:2em;}
 #mainx div:nth-child(3){margin-left:4em;}
 kbd button{position: absolute;bottom:0;right:0;display: none;}
