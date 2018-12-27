@@ -51,11 +51,18 @@
         index2 = 0
         while (index2 < row['length']) {
             kbd1 =document.createElement('kbd')
-            kbd1.textContent = row[index2]
+            span = document.createElement('span')
+            span.textContent = row[index2]
+            kbd1.appendChild(span)
             kbd1.className = 'key'
             buttonx = document.createElement('button')
             buttonx.textContent = '编辑'
             buttonx.id = row[index2]
+            img = document.createElement('img')
+            if (hash[row[index2]]){
+                img.src = 'http://' + hash[row[index2]] + '/favicon.ico' 
+            }else{img.src=''}
+                       
             buttonx.onclick = function ( beidianji ) {
                 key = beidianji.target.id
                 x = prompt('新网址')
@@ -63,6 +70,7 @@
                 localStorage.setItem('zzz',JSON.stringify(hash))
                 console.log(hash)
             }
+            kbd1.appendChild(img)
             kbd1.appendChild(buttonx)
             div1.appendChild(kbd1)
             index2 = index2 +1
