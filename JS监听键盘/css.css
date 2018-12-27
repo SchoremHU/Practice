@@ -1,9 +1,26 @@
 *{margin: 0;padding: 0;}
 a{text-decoration: none;}
-kbd{position:relative;border: 1px red solid; width: 4em;height: 4em;display: inline-block;text-transform: uppercase;}
+kbd{position:relative; width: 4em;height: 4em;display: inline-block;text-transform: uppercase;}
 main{text-align: center;}
 #mainx div:nth-child{display: inline-block;}
-#mainx div:nth-child(2){margin-left:2em;}
-#mainx div:nth-child(3){margin-left:4em;}
+#mainx div:nth-child(2){margin-left:-35px;}
+#mainx div:nth-child(3){margin-left:-100px;}
 kbd button{position: absolute;bottom:0;right:0;display: none;}
 kbd:hover button{display: inline-block;}
+
+.key{
+    width: 50px;
+    height: 40px;
+    background: linear-gradient(to bottom,#292929 0%, #111111 100%);
+    border:1px solid #373737;
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    color: #c5c5c5;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px #1a1b1c, 0 0 0 2px #1f2020, 0 2px 0 1px #080808;
+    display: inline-flex;
+    align-items:center;
+    justify-content:center;
+    margin: 0 10px;
+}
+.row {margin: 20px 0 ;}

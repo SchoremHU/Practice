@@ -37,7 +37,7 @@
         'z':'zhihu.com',
         'm':'mcdonalds.com.cn'
     }
-    var hashInLocalStorage = JSON.parse(localStorage.getItem('zzz')||'')
+    var hashInLocalStorage = JSON.parse(localStorage.getItem('zzz')||'null')
     if(hashInLocalStorage){
         hash = hashInLocalStorage
     }
@@ -45,12 +45,14 @@
     index = 0
     while (index < keys['length']) {
         div1= document.createElement('div')
+        div1.className = 'row'
         mainx.appendChild(div1)
         row = keys[index]
         index2 = 0
         while (index2 < row['length']) {
             kbd1 =document.createElement('kbd')
             kbd1.textContent = row[index2]
+            kbd1.className = 'key'
             buttonx = document.createElement('button')
             buttonx.textContent = '编辑'
             buttonx.id = row[index2]
