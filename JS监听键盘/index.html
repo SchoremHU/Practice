@@ -26,7 +26,7 @@
     // 监听键盘
     listenToKeyUser(hash)
 
-    // 封装函数
+    // 整体封装函数
     function init() {
             var keys = {
                 '0': { 0: 'q', 1: 'w', 2: 'e', 3: 'r', 4: 't', 5: 'y', 6: 'u', 7: 'i', 8: 'o', 9: 'p', length: 10 },
@@ -98,11 +98,12 @@
                 window.open('http://' + website, '_blank')
             }
         }
-        
+
+     // 分拣封装函数
     function getfromLocalStorage(name) {
             return JSON.parse(localStorage.getItem(name) || 'null')
         }
-        
+
     // function tag(tagname ,attributes) {
     //     var element = document.createElement(tagname)
     //     for (var key in attributes){
@@ -144,7 +145,7 @@
     function createimage(domain) {
             var img = tag('img')
             if (domain) {
-                img.src = 'http://' + domain + '/favicon.ico'
+                img.src = 'https://' + domain + '/favicon.ico'
             } else {
                 img.src = 'https://i.loli.net/2018/12/28/5c262e3c72099.png'
             }
