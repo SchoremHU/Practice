@@ -62,21 +62,19 @@
                 if (hash[row[index2]]) {
                     img.src = 'http://' + hash[row[index2]] + '/favicon.ico'
                 } else {
-                    img.src = '#'
+                    img.src = 'https://i.loli.net/2018/12/28/5c262e3c72099.png'
                 }
                 img.onerror = function (imgx) {
-                    imgx.target.src = '#'
+                    imgx.target.src = 'https://i.loli.net/2018/12/28/5c262e3c72099.png'
                 }
                 buttonx.onclick = function (beidianji) {
-                    var  buttonx1 = beidianji.target
-                    var img2 = buttomx1.previousSibling
+                    var buttonx1 = beidianji.target
+                    var img2 = buttonx1.previousSibling
                     var key = buttonx1.id
                     var x = prompt('新网址')
                     hash[key] = x
                     img2.src = 'http://' + x + '/favicon.ico'
-
                     img2.onerror = function (imgx) {
-                        console.log('error')
                         imgx.target.src = '#'
                     }
                     localStorage.setItem('zzz', JSON.stringify(hash))
