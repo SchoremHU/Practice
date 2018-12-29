@@ -7,4 +7,5 @@
 ..../../24/pm CSS新增布局属性grid，参考：https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid  <br/>
 ..../../25/pm JS监听键盘“制作个人主页”-<b>编辑中</b> <br/>
 ..../../28/pm JS监听键盘“制作个人主页”-<b>-完成待优化代码</b><br/>
-..../../28/pm JS监听键盘“制作个人主页”-<b>-函数封装完成</b> http://js.huyamin.com/
+..../../28/pm JS监听键盘“制作个人主页”-<b>-函数封装完成</b> http://js.huyamin.com/  <br/>
+..../../29/   复习JS监听键盘课程
