@@ -1,0 +1,6 @@
+#canvas{
+  background: green;
+  height: 100vh;
+  position:relative;
+}
+body{margin:0;}
