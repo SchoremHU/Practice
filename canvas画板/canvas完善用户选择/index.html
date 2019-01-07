@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./css.css">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Canvas画板</title>
+</head>
+
+<body>
+<canvas id="xxx" width=600 height=600></canvas>
+<div class="background"></div>
+<div id ="actions" class="actions">
+    <svg id="pen" class="icon action" aria-hidden="true">
+        <use xlink:href="#icon-pencil"></use>
+    </svg>
+    <svg id="eraser" class="icon" aria-hidden="true">
+        <use xlink:href="#icon-xiangpica"></use>
+    </svg>
+    <ul class="color">
+      <li id="black" class="black action"></li>
+      <li id="red" class="red"></li>
+      <li id="blue" class="blue"></li>
+      <li id="green" class="green"></li>
+    </ul>
+  <script src="./main.js"></script>
+  <script src="//at.alicdn.com/t/font_1003846_69ftvha174n.js"></script>
+</div>
+</body>
+</html>
