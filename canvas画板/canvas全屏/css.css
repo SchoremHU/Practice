@@ -1,5 +1,5 @@
 body{margin:0;}
-#xxx{background:green;}
+#xxx{background:green; display: block;}
 .actions{position:fixed;bottom:15px;left:10px;width:160px;}
 #brush {position:absolute; bottom:30px;left:0px;}
 
