@@ -34,8 +34,8 @@ blue.onclick =function(){
   green.classList.remove('action')
 }
 green.onclick =function(){
-  black.classList.remove('action')
   context.strokeStyle = 'green'
+  black.classList.remove('action')
   red.classList.remove('action')
   blue.classList.remove('action')
   green.classList.add('action')
@@ -50,7 +50,7 @@ ListenTousing(yyy);
 
 
 /*******封装函数*******/
-
+// 禁止页面滑动
 function handler() {
   event.preventDefault();
 }
