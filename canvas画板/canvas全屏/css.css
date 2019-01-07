@@ -1,3 +1,6 @@
 body{margin:0;}
-button{position:fixed;bottom:0;left:0;}
 #xxx{background:green;}
+.actions{position:fixed;bottom:15px;left:10px;width:160px;}
+#brush {position:absolute; bottom:30px;left:0px;}
+
+
