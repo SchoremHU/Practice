@@ -1,5 +1,24 @@
 var yyy = document.getElementById('xxx');
 var context = yyy.getContext('2d');
+var lineWidthToUser = 4
+  lineS.onclick = function(){
+    lineWidthToUser = 2;
+    lineS.classList.add('action');
+    lineM.classList.remove('action');
+    lineX.classList.remove('action');
+  }
+  lineM.onclick = function(){
+    lineWidthToUser = 4;
+    lineS.classList.remove('action');
+    lineM.classList.add('action');
+    lineX.classList.remove('action');
+  }
+  lineX.onclick = function(){
+    lineWidthToUser = 8;
+    lineS.classList.remove('action');
+    lineM.classList.remove('action');
+    lineX.classList.add('action');
+  }
 
 var usingEraser = false;
 eraser.onclick = function () {
@@ -14,6 +33,7 @@ pen.onclick = function () {
 }
 black.onclick =function(){
   context.strokeStyle = 'black'
+  context.fillStyle = 'black'
   black.classList.add('action')
   red.classList.remove('action')
   blue.classList.remove('action')
@@ -21,6 +41,7 @@ black.onclick =function(){
 }
 red.onclick =function(){
   context.strokeStyle = 'red'
+  context.fillStyle = 'red'
   black.classList.remove('action')
   red.classList.add('action')
   blue.classList.remove('action')
@@ -28,6 +49,7 @@ red.onclick =function(){
 }
 blue.onclick =function(){
   context.strokeStyle = 'blue'
+  context.fillStyle = 'blue'
   black.classList.remove('action')
   red.classList.remove('action')
   blue.classList.add('action')
@@ -35,11 +57,17 @@ blue.onclick =function(){
 }
 green.onclick =function(){
   context.strokeStyle = 'green'
+  context.fillStyle = 'green'
   black.classList.remove('action')
   red.classList.remove('action')
   blue.classList.remove('action')
   green.classList.add('action')
 }
+
+clear.onclick = function(){
+  context.clearRect(0,0,yyy.width,yyy.height)
+}
+
 
 /******总体******/
 autocanvasSize(yyy);
@@ -50,6 +78,13 @@ ListenTousing(yyy);
 
 
 /*******封装函数*******/
+function drawCircle(x,y,radius){
+  //圆形
+  context.beginPath();
+  context.arc(x,y,radius,0,Math.PI*2);
+  context.fill();
+  }
+  
 // 禁止页面滑动
 function handler() {
   event.preventDefault();
@@ -74,7 +109,7 @@ function autocanvasSize(canvasSize) {
 
 function drawline(x1, y1, x2, y2) {
   context.beginPath();
-  context.lineWidth = 4;
+  context.lineWidth = lineWidthToUser;
   context.moveTo(x1, y1);
   context.lineTo(x2, y2);
   context.stroke();
@@ -96,6 +131,7 @@ function ListenTousing(canvas) {
       } else {
         painting = true;
         lastPoint = { x: x, y: y };
+        drawCircle(x,y,lineWidthToUser/2)
       }
     }
     canvas.ontouchmove = function (aaa) {
@@ -106,6 +142,7 @@ function ListenTousing(canvas) {
         context.clearRect(x - 5, y - 5, 10, 10)
       } else {
         var newPoint = { x: x, y: y };
+        drawCircle(x,y,lineWidthToUser/2)
         drawline(lastPoint.x, lastPoint.y, newPoint.x, newPoint.y);
         lastPoint = newPoint;
       }
