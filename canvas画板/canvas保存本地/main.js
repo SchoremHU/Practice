@@ -172,6 +172,7 @@ function ListenTousing(canvas) {
       } else {
         painting = true;
         lastPoint = { x: x, y: y };
+        drawCircle(x,y,lineWidthToUser/2)
       }
     }
     canvas.onmousemove = function (aaa) {
@@ -182,6 +183,7 @@ function ListenTousing(canvas) {
         context.clearRect(x - 5, y - 5, 10, 10)
       } else {
         var newPoint = { x: x, y: y };
+        drawCircle(x,y,lineWidthToUser/2)
         drawline(lastPoint.x, lastPoint.y, newPoint.x, newPoint.y);
         lastPoint = newPoint;
       }
