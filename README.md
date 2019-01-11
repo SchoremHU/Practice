@@ -12,5 +12,5 @@
 2019/01/02/am 算法初步<br/>
 ..../../04/   canvas画板初步<br/>
 ..../../05-07/ canvas画板完善（添加颜色/画笔/橡皮擦选择、封装函数）<br/>
-..../../08/  canvas画板完成（保存/删除按钮）参考：canvas.huyamin.com <br/>
+..../../08/  canvas画板完成（保存/删除按钮）参考：<a href = "canvas.huyamin.com">canvas画板</a> <br/>
 ..../../08/晚上 学习JS数据（number/string/bool/undefined/null/对象/delete/in/forin/typeof）,待完成相关博客<br/>
