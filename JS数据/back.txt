@@ -1,0 +1,10 @@
+number/string/bool/undefined/null/对象/delete/in/forin/typeof
+
+number类（数值）：指的是数字类，正数和浮点数（123和1.23）；
+string类（字符串）：指的是文本，比如（Hello World）；
+boolean类（布尔值）：指的是判断对错真假，turn（真）和false（假）；
+undefined类：指的是未定义或不存在，通常可理解为已声明了参数但未进行定义或赋值，所以现在没有任何值；
+null类：指的是空值，表示此处没有任何值可以使用；
+object类（对象）：可以理解为各种值组成的集合，也可以为拥有键（key）值（value）对的组合。数组（array）和函数（function）囊括在内。
+
+delete属性：
