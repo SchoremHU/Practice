@@ -10,4 +10,4 @@ object类（对象）：可以理解为各种值组成的集合，也可以为�
 delete属性：删除对象自身的属性，并返回turn，但并不会删除继承的属性，当属性不存在时也会返回turn，当该属性为不可删除时返回false。
 in运算符：检查对象是否存在某个属性（检查键名而非键值），存在返回turn，否则返回false，使用示例 if（clientX in hash）{}。
 for...in循环：遍历对象属性，包括继承的属性，但不会遍历不可遍历的属性（如toString），建议结合hasOwenProperty方法检查是否属于自身属性。
-typeof运算符：返回一个值的数据类型。null返回的数据类型为object。
+typeof运算符：返回一个值的数据类型。null返回的数据类型为object，这是一个历史遗留问题。function返回的是“function”。用法typeof function(){}//"function" ,typeof null//"object"
