@@ -90,6 +90,14 @@
         <p v-for="item in list3" :key="item.id">
             <input type="checkbox">{{item.id}} --- {{item.name}}
         </p>
+        <hr>
+        <H2>v-if和v-show</H2>
+        <input type="button" value="toggle" @click="flag=!flag">←←←点击
+<div style="height:100px; border:red solid 1px; position:relative ">
+    <p style="position:absolute; top:1px;left:300px; background-color:yellow;">区别在控制台查看</p>
+    <p v-if ="flag">这里是v-if控制的元素</p>
+    <p v-show="flag">这里是v-show控制的元素</p>
+</div>
 
     </div>
 
@@ -131,7 +139,8 @@
                 name: '托尼·斯坦克',
                 id: 1,
                 gender: '男'
-            }
+            },
+            flag:false,
         },
         methods: {
             show() {
@@ -176,7 +185,8 @@
             },
             add(){
                 this.list3.unshift({ id:this.id,name:this.name })
-            }
+            },
+
         }
     })
 
