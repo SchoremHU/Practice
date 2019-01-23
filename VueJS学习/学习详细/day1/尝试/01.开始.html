@@ -16,7 +16,14 @@
     <div id="app">
         <!-- <p v-cloak>{{msg}}</p> -->
         <p  v-html="msg">1111111</p>
-        <input type="button" value="按钮" @click="show">
+        <input type="button" value="按钮"  :title="msg1 + '123'"  @click="show">
+        <hr>
+        <input type="button" value="跑起来" @click="go">
+        <input type="button" value="停下" @click="stop">
+        <h4> {{msg2}} </h4>
+
+        
+        
     </div>
 
 </body>
@@ -26,11 +33,27 @@
 var vm = new Vue({
     el:'#app',
     data:{
-        msg:'<h1>1213123</h1>'
+        msg:'<h1>1213123</h1>',
+        msg1:'自定义的标签文本',
+        msg2:'Vue跑马灯效果--',
+        intervalId:null
     },
     methods:{
         show(){
             alert('hello')
+        },
+        go(){
+            if(this.intervalId != null )return;
+
+            this.intervalId = setInterval(() => {
+                var start = this.msg2.substring(0,1)
+                var end = this.msg2.substring(1)
+                this.msg2 = end + start
+            },400)
+        },
+        stop(){
+            clearInterval(this.intervalId)
+            this.intervalId = null;
         }
     }
 })
