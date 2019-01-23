@@ -19,6 +19,21 @@
       padding: 40px;
       background-color: red;
     }
+    .red {
+      color: red;
+    }
+
+    .thin {
+      font-weight: 200;
+    }
+
+    .italic {
+      font-style: italic;
+    }
+
+    .active {
+      letter-spacing: 0.5em;
+    }
     </style>
 </head>
 <body>
@@ -50,7 +65,8 @@
         <input type="text" v-model="n2">
         <input type="button" value="=" @click="calc">
         <input type="text" v-model="result">
-        
+        <hr>
+        <h2 :class="classObj">Vue增加样式</h2>        
         
     </div>
 
@@ -68,7 +84,8 @@ var vm = new Vue({
         n1:0,
         n2:0,
         result:0,
-        opt:'+'
+        opt:'+',
+        classObj: { red: true, thin: true, italic: false, active: false }
     },
     methods:{
         show(){
