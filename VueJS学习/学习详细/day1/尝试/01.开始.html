@@ -39,6 +39,17 @@
         <input type="button" value="捕捉触发" @click="btnHandler">
         <a href="https://www.baidu.com" target="_blank" @click.prevent.once>点击两才才访问百度</a>
         </div>
+        <hr>
+        <input type="text" v-model="n1">
+        <select v-model="opt">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="text" v-model="n2">
+        <input type="button" value="=" @click="calc">
+        <input type="text" v-model="result">
         
         
     </div>
@@ -53,7 +64,11 @@ var vm = new Vue({
         msg:'<h1>1213123</h1>',
         msg1:'自定义的标签文本',
         msg2:'Vue跑马灯效果--',
-        intervalId:null
+        intervalId:null,
+        n1:0,
+        n2:0,
+        result:0,
+        opt:'+'
     },
     methods:{
         show(){
@@ -83,6 +98,18 @@ var vm = new Vue({
         },
         div2Handler() {
           console.log('这是触发了 outer div 的点击事件')
+        },
+        calc(){
+            switch (this.opt){
+                case '+':this.result = parseInt(this.n1) + parseInt(this.n2)
+                break;
+                case '-':this.result = parseInt(this.n1) - parseInt(this.n2)
+                break;
+                case '*':this.result = parseInt(this.n1) * parseInt(this.n2)
+                break;
+                case '/':this.result = parseInt(this.n1) / parseInt(this.n2)
+                break;
+            }
         }
     }
 })
