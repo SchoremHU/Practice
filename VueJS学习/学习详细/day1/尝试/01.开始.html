@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <title>Document</title>
     <script src="./vue-2.4.0.js"></script>
     <style>
-    [v-cloak]{
+        [v-cloak]{
         display:none;
     }
     .inner {
@@ -36,11 +37,12 @@
     }
     </style>
 </head>
+
 <body>
     <div id="app">
         <!-- <p v-cloak>{{msg}}</p> -->
-        <p  v-html="msg">1111111</p>
-        <input type="button" value="按钮"  :title="msg1 + '123'"  @click="show">
+        <p v-html="msg">1111111</p>
+        <input type="button" value="按钮" :title="msg1 + '123'" @click="show">
         <hr>
         输入跑马灯内容：
         <input type="text" style="width:100%;" v-model="msg2"><br>
@@ -49,10 +51,10 @@
         <h4> {{msg2}} </h4>
         <hr>
         <div class="inner" @click.capture="div1Handler">
-        <a href="https://www.baidu.com" @click.prevent>阻止访问百度</a><br>
-        <input type="button" value="stop停止冒泡" @click.stop="btnHandler"><br>
-        <input type="button" value="捕捉触发" @click="btnHandler"><br>
-        <a href="https://www.baidu.com" target="_blank" @click.prevent.once>点击两次才访问百度，prevent事件只执行了一次</a>
+            <a href="https://www.baidu.com" @click.prevent>阻止访问百度</a><br>
+            <input type="button" value="stop停止冒泡" @click.stop="btnHandler"><br>
+            <input type="button" value="捕捉触发" @click="btnHandler"><br>
+            <a href="https://www.baidu.com" target="_blank" @click.prevent.once>点击两次才访问百度，prevent事件只执行了一次</a>
         </div>
         <hr>
         <input type="text" v-model="n1">
@@ -66,17 +68,28 @@
         <input type="button" value="=" @click="calc">
         <input type="text" v-model="result">
         <hr>
-        <h2 :class="classObj">Vue增加样式</h2>    <br>
-        <h2 :style="[ styleObj1,styleObj2 ]">Vue增加样式2</h2>    
+        <h2 :class="classObj">Vue增加样式</h2> <br>
+        <h2 :style="[ styleObj1,styleObj2 ]">Vue增加样式2</h2>
         <hr>
         <h2>v-for循环普通数组</h2>
         <p v-for="(item,i) in list">key：{{i}} --- value：{{item}}</p>
         <h2>v-for循环对象数组</h2>
         <p v-for="(user, i) in list2">id:{{user.id}} --- name:{{user.name}}</p>
         <h2>v-for循环对象</h2>
-        <p v-for="(value,key,i) in user " > 索引：{{i}} --- key: {{ key }} --- value: {{ value }} </p>
+        <p v-for="(value,key,i) in user "> 索引：{{i}} --- key: {{ key }} --- value: {{ value }} </p>
         <h2>v-for迭代数字</h2>
-        <p v-for="counts in 5" >这是第 {{counts}} 次循环 </p>
+        <p v-for="counts in 5">这是第 {{counts}} 次循环 </p>
+        <h2>v-for中的key使用</h2>
+        <label >ID:
+        <input type="text" v-model="id">
+    </label>
+    NAME:
+        <input type="text" v-model="name">
+    
+        <input type="button" value="添加" @click="add">
+        <p v-for="item in list3" :key="item.id">
+            <input type="checkbox">{{item.id}} --- {{item.name}}
+        </p>
 
     </div>
 
@@ -85,76 +98,88 @@
 <!-- **************************Vue部分****************************** -->
 <script>
 
-var vm = new Vue({
-    el:'#app',
-    data:{
-        msg:'<h1>1213123</h1>',
-        msg1:'自定义的标签文本',
-        msg2:'Vue跑马灯效果--',
-        intervalId:null,
-        n1:0,
-        n2:0,
-        result:0,
-        opt:'+',
-        classObj: { red: true, thin: true, italic: false, active: false },
-        styleObj1: { color: 'red', 'font-weight': 200 },
-        styleObj2: { 'font-style': 'italic' },
-        list:[1,2,3,4,5,6],
-        list2:[
-            {id:1,name:'a'},
-            {id:2,name:'b'},
-            {id:3,name:'c'},
-            {id:4,name:'d'},
-        ],
-        user:{
-            name:'托尼·斯坦克',
-            id:1,
-            gender:'男'
-        }
-    },
-    methods:{
-        show(){
-            alert('hello')
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            msg: '<h1>1213123</h1>',
+            msg1: '自定义的标签文本',
+            msg2: 'Vue跑马灯效果--',
+            intervalId: null,
+            n1: 0,
+            n2: 0,
+            result: 0,
+            opt: '+',
+            classObj: { red: true, thin: true, italic: false, active: false },
+            styleObj1: { color: 'red', 'font-weight': 200 },
+            styleObj2: { 'font-style': 'italic' },
+            list: [1, 2, 3, 4, 5, 6],
+            list2: [
+                { id: 1, name: 'a' },
+                { id: 2, name: 'b' },
+                { id: 3, name: 'c' },
+                { id: 4, name: 'd' },
+            ],
+            id:'',
+            name:'',
+            list3: [
+                { id: 1, name: 'a' },
+                { id: 2, name: 'b' },
+                { id: 3, name: 'c' },
+                { id: 4, name: 'd' },
+            ],
+            user: {
+                name: '托尼·斯坦克',
+                id: 1,
+                gender: '男'
+            }
         },
-        go(){
-            if(this.intervalId != null )return;
+        methods: {
+            show() {
+                alert('hello')
+            },
+            go() {
+                if (this.intervalId != null) return;
 
-            this.intervalId = setInterval(() => {
-                var start = this.msg2.substring(0,1)
-                var end = this.msg2.substring(1)
-                this.msg2 = end + start
-            },400)
-        },
-        stop(){
-            clearInterval(this.intervalId)
-            this.intervalId = null;
-        },
-        div1Handler() {
-          console.log('这是触发了 inner div 的点击事件')
-        },
-        btnHandler() {
-          console.log('这是触发了 btn 按钮 的点击事件')
-        },
-        linkClick() {
-          console.log('触发了连接的点击事件')
-        },
-        div2Handler() {
-          console.log('这是触发了 outer div 的点击事件')
-        },
-        calc(){
-            switch (this.opt){
-                case '+':this.result = parseInt(this.n1) + parseInt(this.n2)
-                break;
-                case '-':this.result = parseInt(this.n1) - parseInt(this.n2)
-                break;
-                case '*':this.result = parseInt(this.n1) * parseInt(this.n2)
-                break;
-                case '/':this.result = parseInt(this.n1) / parseInt(this.n2)
-                break;
+                this.intervalId = setInterval(() => {
+                    var start = this.msg2.substring(0, 1)
+                    var end = this.msg2.substring(1)
+                    this.msg2 = end + start
+                }, 400)
+            },
+            stop() {
+                clearInterval(this.intervalId)
+                this.intervalId = null;
+            },
+            div1Handler() {
+                console.log('这是触发了 inner div 的点击事件')
+            },
+            btnHandler() {
+                console.log('这是触发了 btn 按钮 的点击事件')
+            },
+            linkClick() {
+                console.log('触发了连接的点击事件')
+            },
+            div2Handler() {
+                console.log('这是触发了 outer div 的点击事件')
+            },
+            calc() {
+                switch (this.opt) {
+                    case '+': this.result = parseInt(this.n1) + parseInt(this.n2)
+                        break;
+                    case '-': this.result = parseInt(this.n1) - parseInt(this.n2)
+                        break;
+                    case '*': this.result = parseInt(this.n1) * parseInt(this.n2)
+                        break;
+                    case '/': this.result = parseInt(this.n1) / parseInt(this.n2)
+                        break;
+                }
+            },
+            add(){
+                this.list3.unshift({ id:this.id,name:this.name })
             }
         }
-    }
-})
+    })
 
 </script>
+
 </html>
