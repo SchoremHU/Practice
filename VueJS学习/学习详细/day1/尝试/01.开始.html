@@ -75,6 +75,8 @@
         <p v-for="(user, i) in list2">id:{{user.id}} --- name:{{user.name}}</p>
         <h2>v-for循环对象</h2>
         <p v-for="(value,key,i) in user " > 索引：{{i}} --- key: {{ key }} --- value: {{ value }} </p>
+        <h2>v-for迭代数字</h2>
+        <p v-for="counts in 5" >这是第 {{counts}} 次循环 </p>
 
     </div>
 
