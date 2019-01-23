@@ -34,10 +34,10 @@
         <h4> {{msg2}} </h4>
         <hr>
         <div class="inner" @click.capture="div1Handler">
-        <a href="https://www.baidu.com" @click.prevent>阻止访问百度</a>
-        <input type="button" value="stop停止冒泡" @click.stop="btnHandler">
-        <input type="button" value="捕捉触发" @click="btnHandler">
-        <a href="https://www.baidu.com" target="_blank" @click.prevent.once>点击两才才访问百度</a>
+        <a href="https://www.baidu.com" @click.prevent>阻止访问百度</a><br>
+        <input type="button" value="stop停止冒泡" @click.stop="btnHandler"><br>
+        <input type="button" value="捕捉触发" @click="btnHandler"><br>
+        <a href="https://www.baidu.com" target="_blank" @click.prevent.once>点击两次才访问百度，prevent事件只执行了一次</a>
         </div>
         <hr>
         <input type="text" v-model="n1">
