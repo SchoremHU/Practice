@@ -10,6 +10,15 @@
     [v-cloak]{
         display:none;
     }
+    .inner {
+      height: 150px;
+      background-color: darkcyan;
+    }
+
+    .outer {
+      padding: 40px;
+      background-color: red;
+    }
     </style>
 </head>
 <body>
@@ -21,7 +30,13 @@
         <input type="button" value="跑起来" @click="go">
         <input type="button" value="停下" @click="stop">
         <h4> {{msg2}} </h4>
-
+        <hr>
+        <div class="inner" @click.capture="div1Handler">
+        <a href="https://www.baidu.com" @click.prevent>阻止访问百度</a>
+        <input type="button" value="stop停止冒泡" @click.stop="btnHandler">
+        <input type="button" value="捕捉触发" @click="btnHandler">
+        <a href="https://www.baidu.com" target="_blank" @click.prevent.once>执行一次百度</a>
+        </div>
         
         
     </div>
@@ -54,6 +69,18 @@ var vm = new Vue({
         stop(){
             clearInterval(this.intervalId)
             this.intervalId = null;
+        },
+        div1Handler() {
+          console.log('这是触发了 inner div 的点击事件')
+        },
+        btnHandler() {
+          console.log('这是触发了 btn 按钮 的点击事件')
+        },
+        linkClick() {
+          console.log('触发了连接的点击事件')
+        },
+        div2Handler() {
+          console.log('这是触发了 outer div 的点击事件')
         }
     }
 })
