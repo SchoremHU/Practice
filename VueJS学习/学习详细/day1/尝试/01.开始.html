@@ -27,6 +27,8 @@
         <p  v-html="msg">1111111</p>
         <input type="button" value="按钮"  :title="msg1 + '123'"  @click="show">
         <hr>
+        输入跑马灯内容：
+        <input type="text" style="width:100%;" v-model="msg2"><br>
         <input type="button" value="跑起来" @click="go">
         <input type="button" value="停下" @click="stop">
         <h4> {{msg2}} </h4>
