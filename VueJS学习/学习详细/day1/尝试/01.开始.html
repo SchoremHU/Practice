@@ -73,7 +73,9 @@
         <p v-for="(item,i) in list">key：{{i}} --- value：{{item}}</p>
         <h2>v-for循环对象数组</h2>
         <p v-for="(user, i) in list2">id:{{user.id}} --- name:{{user.name}}</p>
-        
+        <h2>v-for循环对象</h2>
+        <p v-for="(value,key,i) in user " > 索引：{{i}} --- key: {{ key }} --- value: {{ value }} </p>
+
     </div>
 
 </body>
@@ -100,8 +102,13 @@ var vm = new Vue({
             {id:1,name:'a'},
             {id:2,name:'b'},
             {id:3,name:'c'},
-            {id:4,name:'d'}
-        ]
+            {id:4,name:'d'},
+        ],
+        user:{
+            name:'托尼·斯坦克',
+            id:1,
+            gender:'男'
+        }
     },
     methods:{
         show(){
