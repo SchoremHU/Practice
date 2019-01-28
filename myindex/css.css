@@ -1,0 +1,14 @@
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+body{margin: 0;background:#aaa;}
+ul{list-style: none;}
+
+nav{padding-top: 10px;background: green;   }
+.TopNav .LogoDSL{ float: left; padding:6px 10px; }
+.TopNav{position: fixed;top:0; width: 100%;}
+.TopNav .NavMenu{ float: right;}
+.TopNav .NavMenu>ul{ margin: 0 10px 0 0;padding: 0;}
+.TopNav .NavMenu>ul>li{ background:rosybrown; border-radius:10px 10px 0 0;  padding: 6px 10px;  margin: 0 10px; float: left;}
