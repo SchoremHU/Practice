@@ -7,6 +7,7 @@ body{margin: 0;background:#aaa;}
 ul{list-style: none;}
 a{color: inherit;text-decoration: none;}
 a {color: inherit;text-decoration: none;}
+*{padding: 0; margin: 0;}
 
 nav{padding-top: 10px;   }
 .TopNav .LogoDSL{ float: left; padding:6px 10px; }
@@ -15,5 +16,5 @@ nav{padding-top: 10px;   }
 .TopNav .NavMenu>ul{ margin: 0 10px 0 0;padding: 0;}
 .TopNav .NavMenu>ul>li{ background:rosybrown; border-radius:10px;  padding: 6px 10px;  margin: 0 10px; float: left;}
 
-.TopBackground {height: 1000px; background-image: url(./image/stake150kb.jpg); background-size: cover;background-position: center center;}
-.TopBackground .make{}
+.TopBackground {padding: 100px; height: 800px; background-image: url(./image/stake150kb.jpg); background-size: cover;background-position: center center;}
+.TopBackground .mask{ height: 800px;background-color: rgba(0,0,0,0.5);}
