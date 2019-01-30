@@ -30,7 +30,7 @@ ul,ol{list-style: none;}
 .userCard dl dt{ width: 30%;font-weight: bold;}
 .userCard dl dd{ width: 70%;color: #9da0a7;}
 .userCard .welcome{margin-bottom: 10px; position: relative; background: #e6686a;color: white;display: inline-block;line-height: 22px; padding:4px 16px;}
-.userCard .welcome .triangle{position: absolute; display: block; border:10px solid transparent;width:0;heigth:0;border-left-color:#e6686a;border-top-width:0;left:10px;top:100%;}
+.userCard .welcome .triangle{position: absolute; display: block; border:10px solid transparent;width:0;height:0;border-left-color:#e6686a;border-top-width:0;left:10px;top:100%;}
 .userCard .picture,.userCard .profile{float: left;}
 .userCard .profile{width: 470px; margin-left: 50px;}
 .userCard .profile h1{margin-top: 16px;}

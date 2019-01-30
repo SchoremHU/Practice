@@ -10,11 +10,13 @@ a {color: inherit;text-decoration: none;}
 *{padding: 0; margin: 0;}
 
 nav{padding-top: 10px;   }
-.TopNav .LogoDSL{ float: left; padding:6px 10px; }
+.TopNav .LogoDSL{ float: left; padding:6px 10px; color: cornsilk;font-size: 2em;}
 .TopNav{position: fixed;top:0; width: 100%;}
 .TopNav .NavMenu{ float: right;}
-.TopNav .NavMenu>ul{ margin: 0 10px 0 0;padding: 0;}
+.TopNav .NavMenu>ul{ margin: 10px 10px 0 0;padding: 0;}
 .TopNav .NavMenu>ul>li{ background:rosybrown; border-radius:10px;  padding: 6px 10px;  margin: 0 10px; float: left;}
 
 .TopBackground {padding: 100px; height: 800px; background-image: url(./image/stake150kb.jpg); background-size: cover;background-position: center center;}
-.TopBackground .mask{ height: 800px;background-color: rgba(0,0,0,0.5);}
+.TopBackground .mask{ height: 100%;background-color: rgba(0,0,0,0.5);}
+
+h1{margin-top: -600px; text-align: center;font-family: kaiti; font-size: 2.5em;color: blanchedalmond;}
