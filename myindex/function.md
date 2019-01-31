@@ -42,10 +42,16 @@ f.call = function(){
 }
 f.call() // 1
 
-使用方法，
+使用方法
 function f(x,y){return x+y}
 第一个位置写undefined，第二个位置开始传入第一个参数
 f.call(undefined,1,2) //3
+
+call的第一个参数可以用this得到，后面的参数可以用arguments得到
+'use strict'严格模式
+
+arguments 伪数组
+__proto__ 不是Array.prototype,但又原型链跟length的，有数组特征没有数组的共有属性
 </pre>
 
 
