@@ -41,6 +41,11 @@ f.call = function(){
 	return window.eval(f.fbody)
 }
 f.call() // 1
+
+使用方法，
+function f(x,y){return x+y}
+第一个位置写undefined，第二个位置开始传入第一个参数
+f.call(undefined,1,2) //3
 </pre>
 
 
