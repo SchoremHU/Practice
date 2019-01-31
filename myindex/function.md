@@ -26,5 +26,11 @@ var f4 = new Function() //f4.name anonymous
 
 </pre>
 
+函数的调用-call
+-
+<pre>
+
+</pre>
+
 
 
