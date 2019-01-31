@@ -30,6 +30,17 @@ var f4 = new Function() //f4.name anonymous
 -
 <pre>
 
+eval  字符串当代码执行
+
+f.call()
+-------------------------
+var f = {}
+f.params=['x','y']
+f.fbody='console.log('1')'
+f.call = function(){
+	return window.eval(f.fbody)
+}
+f.call() // 1
 </pre>
 
 
