@@ -97,7 +97,7 @@ x是a的value，y是a的key，z是a的数组对象本身。
 sort 排序
 
 a.sort( function(x,y){return y-x} )
-
+根据y-x返回值，判断排序要求
 
 </pre>
 
