@@ -51,8 +51,12 @@ call的第一个参数可以用this得到，后面的参数可以用arguments得
 'use strict'严格模式
 
 arguments 伪数组
-__proto__ 不是Array.prototype,但又原型链跟length的，有数组特征没有数组的共有属性
+__proto__ 没有或没有指向Array.prototype,但有key跟length的，有数组特征没有数组的共有属性，或者是没有push方法的。
 </pre>
+
+调用栈-call stack
+-
+
 
 
 
