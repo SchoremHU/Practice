@@ -70,8 +70,14 @@ __proto__ 没有或没有指向Array.prototype,但有key跟length的，
 作用域中声明不加 var 首先是赋值，
 沿着作用域的树往上找 var a 变量，
 没有找到就是赋值并声明全局变量 window a
-</pre>
 
+<em>声明提升，var/function 提升声明到作用域最上方</em>
+</pre>
+闭包
+-
+<pre>
+如果一个函数，使用了他范围外的变量，那么（这个函数+这个变量）就叫做闭包
+</pre>
 window.Array
 -
 <pre>
