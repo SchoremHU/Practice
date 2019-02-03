@@ -64,6 +64,13 @@ __proto__ 没有或没有指向Array.prototype,但有key跟length的，
 执行完再回到标记位置往下执行。
 以此类推
 </pre>
+作用域
+-
+<pre>
+作用域中声明不加 var 首先是赋值，
+沿着作用域的树往上找 var a 变量，
+没有找到就是赋值并声明全局变量 window a
+</pre>
 
 window.Array
 -
