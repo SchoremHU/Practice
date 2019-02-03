@@ -136,4 +136,37 @@ chang();
 console.log('c的最终值为：'+c)
 </pre>
 
+DOM节点API
+-
+<pre>
+child/children/parent
+子节点/多个子标签/父节点
 
+node
+节点
+
+first/last
+第一个/最后一个
+
+next/previous
+下一个/上一个
+
+sibling/siblings
+兄弟节点/多个兄弟节点
+
+type
+类型
+
+value/text/content
+值/文本/内容
+
+inner/outer
+内部的/外部的
+
+element
+元素
+
+
+</pre>
+DocumentFragment优化
+-
