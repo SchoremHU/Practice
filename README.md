@@ -15,4 +15,5 @@
 ..../../08/  canvas画板完成（保存/删除按钮）参考：<a href = "https://canvas.huyamin.com/">canvas画板</a> <br/>
 ..../../08/晚上 学习JS数据（number/string/bool/undefined/null/对象/delete/in/forin/typeof）,待完成相关博客<br/>
 ..../../21/  Vue学习，更新第一天学习及笔记目录参考 </br>
-..../../25/  Vue学习，更新第二天学习及笔记目录参考
+..../../25/  Vue学习，更新第二天学习及笔记目录参考 </br>
+..../02/06/  更新滑板社网站
