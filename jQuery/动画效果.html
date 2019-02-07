@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="./jquery-3.1.1.min.js"></script>
+    <style>
+      html,
+      body,
+      div {
+        margin: 0;
+        padding: 0;
+      }
+      .box{
+        width: 100px;
+        height: 100px;
+        background-color: #000;
+        display: none;
+      }
+      .box2{
+        width: 100px;
+      height: 100px;
+      background-color: #098;
+      border: 1px solid #ccc;
+      position: absolute;
+      left:200px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="button" value="显示" id="btn" />
+    <input type="button" value="隐藏" id="btn2" />
+    <input type="button" value="滑上" id="btn3" />
+    <input type="button" value="滑下" id="btnSlidedown" />
+    <input type="button" value="滑上滑下" id="btn4" />
+    <input type="button" value="动画" id="btn5" />
+    <input type="button" value="自定义动画" id="btn6" />
+    <div class="box2"></div>
+    <div class="box"></div>
+    
+    <script>
+      $(function() {
+        $("#btn").on("click", function(e) {
+          // $('div').show(1000)
+          // $('div').show(1000,'linear')
+          $(".box").show(1000, "swing", function(e) {
+            console.log("jieshu");
+          });
+        });
+        $("#btn2").on("click", function(e) {
+          $(".box").hide(1000, "linear");
+        });
+        $("#btn3").on("click", function(e) {
+          $(".box").slideUp("slow");
+        });
+        $("#btnSlidedown").on("click", function(e) {
+          $(".box").slideDown(300, "linear", function() {
+            console.log("slide down is over");
+          });
+        });
+        $("#btn4").on("click", function(e) {
+          $(".box").slideToggle(500);
+        });
+
+        $('#btn5').on('click',function(e){
+            $('.box').show(1000).slideUp(1000).slideDown(1300).fadeTo(500, 0.5);
+        })
+        $('#btn6').on('click',function(e){
+            $('.box2').animate({
+                height:200,
+            },1000,'swing')
+        })
+      });
+
+    //   show hide slideUp slideDown slideToggle fadeIn fadeOut fadeToggle
+    // 参数 [duration]动画持续时间，[easing]动画效果 [fn]回调函数
+    // 返回值：都是调用动画的包装对象
+    </script>
+  </body>
+</html>
