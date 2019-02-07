@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-3.1.1.min.js"></script>
+</head>
+<body>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <p>5</p>
+
+    <script>
+    $(function(){
+
+        $('p').css('color','blue');
+        $('p:first').css('color','red');
+        // $('p').css('color','black');
+        $('p').css({
+            // "color":"red",
+            "font-size":"18px",
+            "background":"yellow"
+        })
+        // 动态创建标签元素
+        $('<div><span>12312</span><div>').appendTo(document.body);
+            // 构造函数汇总
+            // 选择器、吧dom对象转化为jQuery对象、接受回调函数，作为网页加载完成的入口、接受一个html的字符串，创建成动态的dom的包装对象
+            var $div = $('<div><span>12312</span><div>');
+            $(document.body).append($div);
+    })
+    </script>
+</body>
+</html>

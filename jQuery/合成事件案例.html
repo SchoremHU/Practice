@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="./jquery-3.1.1.min.js"></script>
+    <style>
+    .box{
+        overflow: hidden;
+        position:absolute;
+        border:1px solid red;
+    }
+    .box .aside{
+        display:none;
+        width: 100px;
+        height: 200px;
+        float:left;
+    }
+    .left{
+        height: 200px;
+        width: 100px;
+        float:left;
+    }
+    
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="left"></div>
+      <div class="aside"></div>
+    </div>
+
+   <script>
+    $(function(){
+
+        $('.box').hover(function(e){
+            $('.aside').css('display','none')
+        },function(e){
+            $('.')
+        })
+
+    })
+
+   </script>  
+   </body>
+</html>

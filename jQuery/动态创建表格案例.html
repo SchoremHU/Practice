@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="./jquery-3.1.1.min.js"></script>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <th>用户名</th>
+        <th>邮箱</th>
+        <th>年龄</th>
+      </thead>
+      <tbody>
+        <td>大哥</td>
+        <td>123</td>
+        <td>18</td>
+      </tbody>
+    </table>
+    <script>
+      var data = [
+        {
+          name: "laohu",
+          mail: "whym21@163.com",
+          age: "18"
+        },
+        {
+          name: "laohu1",
+          mail: "whym21@163.com",
+          age: "17"
+        },
+        {
+          name: "laohu2",
+          mail: "whym21@163.com",
+          age: "19"
+        }
+      ];
+      $(function() {
+        var tempStrArray = [];
+        for (var i = 0; i < data.length; i++) {
+          tempStr += "<tr>";
+          tempStr += "<td>" + datd[i].name + "</td>";
+          tempStr += "<td>" + datd[i].mail + "</td>";
+          tempStr += "<td>" + datd[i].age + "</td>";
+          tempStr += "<tr>";
+          tempStrArray.push(tempStr);
+        };
+
+      });
+
+    //   添加样式类  addClass
+    </script>
+  </body>
+</html>
