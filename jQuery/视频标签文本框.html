@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="./jquery-3.1.1.min.js"></script>
+    <style>
+      html,
+      body,
+      div {
+        margin: 0;
+        padding: 0;
+      }
+      .label-wrap {
+        width: 300px;
+        
+        padding: 30px;
+        line-height: 30px;
+        border: 1px solid #ccc;
+        overflow: hidden;
+      }
+      .label-wrap .txt-lb {
+        border: none;
+        outline: none;
+        float: left;
+        height: 30px;
+        line-height: 30px;
+        width: 60px;
+      }
+      .label-wrap .lb-span {
+        float: left;
+        border: 1px solid #ccc;
+        padding: 0 10px;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="label-wrap">
+      <span class="lb-span">jquery<i class="glyphicon glyphicon-remove"></i></span>
+      <input type="text" class="txt-lb" />
+    </div>
+
+    <script>
+      $(function() {
+        $(".txt-lb").on("keydown", function(e) {
+          if (e.which == 13) {
+            inputToLabel();
+          } else if (e.which == 8) {
+            if ($(this).val().length <= 0) {
+              var txt = $(".label-wrap span:last").text();
+              $(this).val(txt);
+              $(".label-wrap span:last").remove();
+              e.preventDefault();
+              e.stopPropagation();
+            }
+          }
+        });
+        $(".label-wrap").on("click", function(e) {
+          $(".txt-lb").focus();
+        });
+        $(".txt-lb").on("blur", function(e) {
+          inputToLabel();
+        });
+        $('.label-wrap').on('click','i',function(e){
+            $(this).parent().remove();
+        });
+        function inputToLabel() {
+            if($('.txt-lb').val().length>0){
+                
+          var $lb = $('<span class="lb-span">' + $('.txt-lb').val() + '<i class="glyphicon glyphicon-remove"></i></span>');
+          $('.txt-lb').before($lb);
+          $('.txt-lb').val("");
+            }
+        }
+      });
+    </script>
+  </body>
+</html>
