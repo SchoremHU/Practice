@@ -18,9 +18,11 @@
         $('input:text').on('keydown',function(e){
             console.log(e.which)
         });
+        // 绑定一个自定义事件
         $('input').on('my',function(e){
             console.log('洗定义时间')
         });
+        // 触发自定义事件
         $('input').trigger('my')
     })
     
