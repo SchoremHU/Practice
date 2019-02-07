@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-3.1.1.min.js"></script>
+    <style>
+    html,body,div{
+        padding: 0;
+        margin: 0;
+    }
+    .box{
+        width: 100px;
+      height: 100px;
+      border: 13px solid #ccc;
+      padding: 10px;
+      margin: 22px;
+      background-color: #c09;
+    }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</body>
+
+<script>
+$(function(){
+    console.log('1h',$('.box').innerHeight());
+    console.log($('.box').width(500))
+})
+// height width innerHeight innerWidth outerHeight outerWidth 
+// scrollTop scrollLeft 可读可写
+// position 获得一个对象，left，top值 ，相当于dom中的offsetLeft,offsetTop
+// 相对于视口的宽高，clientLeft clientTop
+</script>
+</html>
