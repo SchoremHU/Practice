@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="按钮" id="btn">
+<ul class="list">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+    <script>
+    
+    
+    $(function(){
+        $('#btn').on('click',function(e){
+            console.log(123)
+        })
+        // var domp = document.createElement('p')
+        // domp.innerHTML = "123"
+        // $(domp).on('click')
+
+        $('<p>1231223</p>').on('click',function(e){
+            // 给动态标签绑定事件
+            console.log($(this).text())
+        })
+        $('body').append($p)
+        // 1.接受一个回调函数，作为document ready事件
+        // 2.接受一个字符串作为选择器进行选择页面中元素，返回jQuery包装对象
+        // 3.可以接受一个dom对象，作为dom对象转换jQuery包装对象
+        // 4.可以接受一个html标签字符串，创建jQuery包装对象
+        // on提单delegate
+        $('.list').om('click','li',function(e){
+            console.log($(this).text())
+        })
+    })</script>
+</body>
+</html>

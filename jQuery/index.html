@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jQuery1.11.0.chm"></script>
+</head>
+<body>
+    <select name="pro" id="proSel"></select>
+    <select name="city" id="citySel"></select>
+
+
+    <script>
+    var data = [{
+        name:"1",
+        data:[1,2],
+    }];
+
+    $(function(){
+        
+        initProSel();
+       
+    });
+
+    function initPrpSel(){
+        var strHTMLArray = [];
+        for(var i = o; i < data.length; i ++){
+            var proName = data[i].name;
+            strHTMLArray.push('<option value="'+ proName +'">' + proName + '</option>')
+        }
+
+        $('#proSel').html(strHTMLArray.join(''));
+        $('#proSel').chang(function(){
+            console.log($('#proSel').val());
+            var proName = $('#proSel').val();
+            for(var j = 0; j <data.length; j++){
+                if(data[j].name == proName){
+                    var cities = data[j].cities;
+                    initCityes(cities);
+                }
+            }
+        })
+        $('#proSel').triggerHandler('change')
+    }
+    function initCityes(cities){
+        var strHTMLArray = [];
+        for (var i = 0; i< cities.length;i++){
+            strHTMLArray.push('<option value="'+ proName +'">' + proName + '</option>')
+            $('citySel').html(strHTMLArray.join(''));
+        }
+    }
+    
+    </script>
+</body>
+</html>

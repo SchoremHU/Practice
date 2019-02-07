@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    html,body,div,ul,li{
+        margin: 0;
+        padding: 0;
+    }
+    ul,li{
+        list-style: none;
+    }
+    .ac{
+        width: 200px;
+        border:1px soild red;
+    }
+
+    .ac .ac-item .ac-item-hd{
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        background: #cfcecf;
+    }
+    .ac .ac-item .ac-item-hd:hover{
+        background: yellowgreen;
+    }
+    .ac .ac-item .ac-item-bd{
+        height: 200px;
+        display:none;
+    }
+    .ac .on .ac-item-bd{
+        display:block;
+    }
+    </style>
+    <script src="./jquery-3.1.1.min.js"></script>
+</head>
+<body>
+    <ul class="ac">
+        <li class="ac-item">
+            <div class="ac-item-hd">头部1</div>
+            <div class="ac-item-bd">内容1</div>
+        </li>
+        <li class="ac-item">
+            <div class="ac-item-hd">头部2</div>
+            <div class="ac-item-bd">内容2</div>
+        </li>
+        <li class="ac-item">
+            <div class="ac-item-hd">头部3</div>
+            <div class="ac-item-bd">内容3</div>
+        </li>
+        <li class="ac-item">
+            <div class="ac-item-hd">头部4</div>
+            <div class="ac-item-bd">内容4</div>
+        </li>
+    </ul>
+
+<script>
+$(function(){
+    $('.ac-item-hd').on('click',function(e){
+        $(this).parent().addClass('on');
+        $(this).parent().sibling('li').removeClass('on')
+
+    })
+
+
+
+})
+
+</script>
+
+</body>
+</html>

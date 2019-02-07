@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="按钮" id="btn">
+    <ul class="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+<script>
+
+$(function(){
+    // 事件委托绑定方式，第一个参数是多虑子元素
+    // 第二个参数是事件类型
+    // 第三个参数是事件处理程序
+    // click是简单绑定事件
+    // bind
+    // one事件只执行一次
+    // live对动态创建的dom元素绑定事件
+    // delegate事件委托绑定事件
+    $('.list').delegate('li','click',function(e){
+        console.log(this.innerHTML);
+        console.log($(this).text())
+    })
+
+})
+</script>
+
+</body>
+</html>

@@ -8,7 +8,24 @@
     <script src="./code/lib/vue-2.4.0.js"></script>
 </head>
 <body>
-    <input type="button" value="点击">
+    <div id="app">
+        <input type="button" value="点击">
+        <com1></com1>
+    </div>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{},
+        metdohs:{},
+        compoonents:{
+            com1:{
+                template:'<h1>123</h1>'
+            }
+        },
+    }),
+
+
+</script>
 
 
 </body>
