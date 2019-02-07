@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-3.1.1.min.js"></script>
+</head>
+<body>
+    <input type="button" value="解绑事件" id="btn">
+    <ul class="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+
+<script>
+
+$(function(){
+
+    $('.list li').on('click',function(e){
+        console.log(this.innerHTML);
+    })
+    $('.list li').on('click',function(e){
+        console.log('wwwwww',this.innerHTML);
+    })
+    $('.list li').on('click',function(e){
+        console.log('eeeeeeee',this.innerHTML);
+    })
+
+    $('#btn').off('click',function(){
+        
+    })
+})
+
+</script>
+</body>
+</html>
