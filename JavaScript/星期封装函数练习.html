@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" value="星期几" id="btn" />
+    <input type="text" id="txt" />
+    <div id="weeks"></div>
+
+    <script>
+
+ console.log(getWeekName(2))
+
+      function getWeekName(n) {
+        if (typeof n != "number" || n > 7 || n < 1) {
+          return "重新输入！";
+        }
+        var t = "";
+        switch (n) {
+          case 1:
+            t = "星期一";
+            break;
+          case 2:
+            t = "星期二";
+            break;
+          case 3:
+            t = "星期三";
+            break;
+          case 4:
+            t = "星期四";
+            break;
+          case 5:
+            t = "星期五";
+            break;
+          case 6:
+            t = "星期六";
+            break;
+          case 7:
+            t = "星期日";
+            break;
+        }
+        return t
+      }
+    </script>
+  </body>
+</html>

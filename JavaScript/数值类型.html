@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 数值类型
+        123;//正整数
+
+        0.21;//小数
+        .23;//0可以省去
+        0x12;// 0x 表示16进制，
+        Number.MAX_VALUE;//数字最大值，病是不是所有浏览器都只支持这个值
+        Number.MIN_VALUE;//数字最小值
+        // 超过最大最小的范围会提示infinity，无穷大
+        NaN;//非数字值，特殊数字类型，数字除0返回NaN
+        parseInt('sss')//转成正数 NaN
+        parseInt('1212')//1212
+        // 判断是都是NaN，使用isNaN
+        isNaN(NaN)//true
+
+        // 
+        // undefined类型，
+        var a ;//undefined  定义了变量但未赋值
+        console.log(b);//报错 undefined  未定义或赋值，直接使用
+        var b = undefined;//直接赋值undefined
+                          // 函数没有返回值，执行完之后默认返回undefined
+        // null 代表空对象，对象类型的一个值，表示无对象，开发人员定义的一个值
+        null == undefined//true 表示空
+        null === undefined//false 类型不同
+        // false值：'' NaN undefined null false 0
+        
+        </script>
+</body>
+</html>
