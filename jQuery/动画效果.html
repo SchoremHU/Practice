@@ -37,6 +37,8 @@
     <input type="button" value="滑上滑下" id="btn4" />
     <input type="button" value="动画" id="btn5" />
     <input type="button" value="自定义动画" id="btn6" />
+    <input type="button" value="结束动画" id="btn7" />
+    <input type="button" value="停止动画" id="btn8" />
     <div class="box2"></div>
     <div class="box"></div>
     
@@ -71,6 +73,14 @@
             $('.box2').animate({
                 height:200,
             },1000,'swing')
+        })
+        $('#btn7').on('click',function(e){
+            $('.box').finish();
+        })
+        $('#btn8').on('click',function(e){
+            // 不传或传入一个false参数，结束当前动画，继续后续动画
+            // 传入一个true参数，结束当前及后续动画
+            $('.box').stop();
         })
       });
 

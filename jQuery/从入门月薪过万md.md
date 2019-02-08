@@ -131,9 +131,22 @@ $('#btn').triggerHandler('click',[2,5])
 
 </pre>
 
-bind绑定事件方式/on绑定事件
+each方法
 -
 <pre>
-
+选择
 
 </pre>
+jQuery扩展的扩展extend方法
+
+var target = {name:'sss'];
+
+var obj1 ={age:11}
+
+var newObj = jQuery.ectend(target,age)
+
+
+
+浅拷贝，子对象只复制地址
+
+深拷贝，

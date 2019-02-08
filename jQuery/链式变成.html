@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        www
+    </div>
+    <script src="./jquery-3.1.1.min.js"></script>
+    <script>
+    $(function(){
+        $('.box').text('jjjj').slideUp(1000).slideDown(1000);
+    });
+    // 链式变成原理
+    var cat = {
+        run:function(){
+            console.log('running')
+            return this
+        },
+        sayhi:function(){
+            CONSOLE.LOG('hhh')
+            return this
+        },
+        jump:function(){
+            console.log('hi')
+            return this
+        }
+    }
+    
+    </script>
+</body>
+</html>

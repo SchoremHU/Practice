@@ -1,75 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <style>
-    html,body,div,ul,li{
+      html,
+      body,
+      div,
+      ul,
+      li {
         margin: 0;
         padding: 0;
-    }
-    ul,li{
+      }
+      ul,
+      li {
         list-style: none;
-    }
-    .ac{
+      }
+      .ac {
         width: 200px;
-        border:1px soild red;
-    }
+        border: 1px solid red;
+      }
 
-    .ac .ac-item .ac-item-hd{
+      .ac .ac-item .ac-item-hd {
         height: 30px;
         text-align: center;
         line-height: 30px;
         background: #cfcecf;
-    }
-    .ac .ac-item .ac-item-hd:hover{
+        border: 1px solid yellowgreen;
+        cursor: pointer;
+      }
+      .ac .ac-item .ac-item-hd:hover {
         background: yellowgreen;
-    }
-    .ac .ac-item .ac-item-bd{
+      }
+      .ac .ac-item .ac-item-bd {
         height: 200px;
-        display:none;
-    }
-    .ac .on .ac-item-bd{
-        display:block;
-    }
+        display: none;
+      }
+      .ac .on .ac-item-bd {
+        /* display:block; */
+      }
     </style>
     <script src="./jquery-3.1.1.min.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <ul class="ac">
-        <li class="ac-item">
-            <div class="ac-item-hd">头部1</div>
-            <div class="ac-item-bd">内容1</div>
-        </li>
-        <li class="ac-item">
-            <div class="ac-item-hd">头部2</div>
-            <div class="ac-item-bd">内容2</div>
-        </li>
-        <li class="ac-item">
-            <div class="ac-item-hd">头部3</div>
-            <div class="ac-item-bd">内容3</div>
-        </li>
-        <li class="ac-item">
-            <div class="ac-item-hd">头部4</div>
-            <div class="ac-item-bd">内容4</div>
-        </li>
+      <li class="ac-item on">
+        <div class="ac-item-hd">头部1</div>
+        <div class="ac-item-bd">内容1</div>
+      </li>
+      <li class="ac-item">
+        <div class="ac-item-hd">头部2</div>
+        <div class="ac-item-bd">内容2</div>
+      </li>
+      <li class="ac-item">
+        <div class="ac-item-hd">头部3</div>
+        <div class="ac-item-bd">内容3</div>
+      </li>
+      <li class="ac-item">
+        <div class="ac-item-hd">头部4</div>
+        <div class="ac-item-bd">内容4</div>
+      </li>
     </ul>
 
-<script>
-$(function(){
-    $('.ac-item-hd').on('click',function(e){
-        $(this).parent().addClass('on');
-        $(this).parent().sibling('li').removeClass('on')
-
-    })
-
-
-
-})
-
-</script>
-
-</body>
+    <script>
+            $(function() {
+              $(".ac-item-hd").on("click", function(e) {
+                $(this)
+                  .parent()
+                  .addClass("on");
+                $(this)
+                  .siblings(".ac-item-bd")
+                  .slideDown(500);
+                $(this)
+                  .parent()
+                  .siblings("li")
+                  .removeClass("on")
+                  .find(".ac-item-bd")
+                  .slideUp(500);
+              });
+            });
+            var target = {name:'sss'};
+            var obj1 ={age:11} 
+            var newObj = jQuery.extend(target,obj1)
+            console.log(newObj)
+    </script>
+  </body>
 </html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="./jquery-3.1.1.min.js"></script>
+    <style>
+      html,
+      body,
+      div,
+      ul,
+      li {
+        padding: 0;
+        margin: 0;
+      }
+      ul,
+      ol {
+        list-style: none;
+      }
+      .list li {
+        float: left;
+        width: 20px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="list">
+      <li>☆</li>
+      <li>☆</li>
+      <li>☆</li>
+      <li>☆</li>
+      <li>☆</li>
+      <li>☆</li>
+      <li>☆</li>
+      <li>☆</li>
+      <li>☆</li>
+      <li>☆</li>
+    </ul>
+
+    <script>
+      $(function() {
+        $(".list li")
+          .hover(
+            function(e) {
+              $(this)
+                .text("○")
+                .prevAll()
+                .text("○");
+            },
+            function(e) {
+              $(this)
+                .text("☆")
+                .nextAll()
+                .text("☆");
+            }
+          )
+          .on("click", function(e) {
+            $(this)
+              .addClass("cur")
+              .siblings()
+              .removeClass("cur");
+          });
+        //   给整个ul标签绑定一个mouseleave事件
+        $(".list").on("mouseleave", function(e) {
+          $(".list li.cur")
+            .text("○")
+            .prevAll()
+            .text("○")
+            .end()
+            .nextAll()
+            .text("☆");
+        });
+      });
+
+      (function($) {
+        $.fn.logText = function() {
+          console.l.og(this.text());
+        };
+      })(jQuery);
+      $(function() {
+        $(".box").logText();
+      });
+
+      //   扩展构造函数上方的插件
+      jQuery.logTime = function() {
+        console.log(
+          Data()
+            .now()
+            .toString()
+        );
+      };
+
+      $.extend({
+        logTime: function() {
+          console.log(new Data());
+        }
+      });
+      $.logTime();
+    </script>
+  </body>
+</html>
