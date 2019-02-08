@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var t = new Object(); //创建一个object对象,new会创建一个对象，然后对象执行object函数，最后返回一个实例
+      t.name = "kkk";
+      t.age = 11;
+      t.run = function() {
+        console.log("hahah");
+      };
+
+      console.log(t.run);
+
+      2**10// ** 求幂运算符
+    //   ？构造函数创建数组传递参数
+    var arr =new Array(4);
+    arr[0]='11'
+    console.log(arr)
+    // 给构造函数传递数值类型，那么他认为是创建容量为数值的数组
+    // 创建数组的时候，顺便进行初始化数组的内容
+    var arr2 = new Array(1,2,3,'ss',true,[2])    
+    console.log(arr2)
+    // 减小length值，就相当于阶段了数组，后面的数组全部默认放弃
+
+    </script>
+  </body>
+</html>

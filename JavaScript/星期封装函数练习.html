@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <script src="../lib/jquery-3.1.1.min.js"></script>
   </head>
   <body>
     <input type="button" value="星期几" id="btn" />
@@ -12,8 +13,14 @@
     <div id="weeks"></div>
 
     <script>
-
- console.log(getWeekName(2))
+      $(function() {
+        $("#btn").on("click", function(e) {
+          var d = JSON.parse($("#txt").val());
+          $("div").text(getWeekName(d));
+          console.log(typeof d);
+          console.log(getWeekName(d));
+        });
+      });
 
       function getWeekName(n) {
         if (typeof n != "number" || n > 7 || n < 1) {
@@ -43,7 +50,7 @@
             t = "星期日";
             break;
         }
-        return t
+        return t;
       }
     </script>
   </body>
