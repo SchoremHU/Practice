@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var a = [1,8,5,4,6,3,2,7];
+      /*
+      1、第一个跟第二个比较，大的到到二个位置
+      2、第二个跟第三个比较，大的到第三个位置
+      .
+      .
+      .
+      3、最大的到最后面位置
+      4、再次重复1/2/3步骤
+      */
+     
+     console.log(a);
+      for (i = 0; i < a.length - 1; i++) {
+        for (k = 0; k < a.length - 1 - i; k++) {
+          if (a[k] > a[k + 1]) {
+            let temp = a[k];
+            a[k] = a[k + 1];
+            a[k + 1] = temp;
+          }
+        }
+        console.log(a);//放这里可以看过程
+    }
+    </script>
+  </body>
+</html>
