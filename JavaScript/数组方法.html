@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        pop()从数组尾部弹出一个元素，后进后出
+        push()从尾部进入一个元素，并返回length
+        shift()从数组头部弹出一个元素，先进先出
+        unshift()从头部进入一个元素，并返回length
+        puish()结合 shift() 可以模仿排队先进先出
+        sort()，对数组进行字符串方式排序，不是字符串转成字符串进行比较
+        [1,22,5,8,1,4,8]->[1,1,22,4,5,8,8]
+        sort(function(a,b){return a-b})//判断a-b的值进行排序，0,-1,1
+
+        reverse(),可以让原数组逆序，[1,2,3,4]->[4,3,2,1]
+
+        concat()方法重组两个数组，不会对原数组有影响,
+        join()方法数组转换为字符串，默认类似 toString()，以逗号隔开，可以传参数表示间隔方式
+        slice()方法截取数组数据
+        接受负数，接受两个参数表示，分别代表起始key和结束key
+        从key值本身的value值(包括本身)开始切片
+        */
+
+        var t =[]
+        t.push(1)
+        t.push(2)
+        t.push(3)
+        console.log(t)
+        console.log(t.shift())
+        console.log(t)
+        </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var a1 = []; //空数组
+      var a2 = [1, 2, "ss", ["s", 2]]; //复杂数组
+      var a3 = [1, , 2];
+      //   console.log('a1=',a1)
+      //   console.log('a2=',a2)
+      //   console.log('a3=',a3)
+      for (var i = 0; i < a2.length; i++) {
+        console.log(a2[i]);
+      }
+      for (var k in a2) {
+        console.log(a2[k]); //k是key 不是value
+        // hasOwnProperty进行过滤，
+      }
+
+      var t = [1, 2, , 8, "ss", 3, 4.5, "3", [2, 3]];
+      var yesnum = 0,
+        nonum = 0;
+    //   for (var i = 0; i < t.length; i++) {
+    //     if (t[i] === 1 || t[i] === 2 || t[i] === 3) {
+    //       yesnum += 1;
+    //     } else {
+    //       nonum += 1;
+    //     }
+    //     console.log("合法" + yesnum);
+    //     console.log("不合法" + nonum);
+    //   }
+      for (var k in t) {
+        switch (t[k]) {
+          case 1:
+          case 2:
+          case 3:
+            yesnum += 1;
+            break;
+          default:
+            nonum += 1;
+        }
+      }
+      console.log("合法" + yesnum);
+      console.log("不合法" + nonum);
+
+    //   for-in数组循环会越过稀疏数组中的undefined空值，也会越过第三方key值
+    /*
+    1.length和数组的元素个数不一定相等
+    2.数组不一定是连续的
+    3.使用for-in循环可以对稀疏数组的空值undefined进行过滤
+    */
+    </script>
+  </body>
+</html>
