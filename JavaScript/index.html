@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    值类型：string number bollean null undefined <br />
+    引用类型：function array <br />
+    arguments,每个函数内部都可以直接访问，里面存放我们传递给函数的参数，是一个伪数组
+    <br />
+    同步任务：for 求和 js赋值 js运算符 表表单处理<br />
+    异步任务：dom
+
+    <script>
+            //函数参数的封装
+            //   形参非常多，超过四个
+            //   function rell(obj1) {
+            //        return name+age
+            //   }
+            //   var obj1 = {
+            //       name:1,
+            //       age:2
+            //   }
+            //   rell(obj1)
+
+            //   var a1 = 19,
+            //     a2 = 20,
+            //     a3 = "www",
+            //     b1 = { name: "name1" };
+            //   a1 = f1(a1, a2);
+
+            //   function f1(a, b) {
+            //     var t = 0,
+            //       m = 10;
+            //     for (var i = 0; i < a; i++) {
+            //       console.log(i);
+            //     }
+            //     function f2() {
+            //       console.log(f2);
+            //     }
+            //     return a + b;
+            //   }
+
+          //   var k = 29;
+          //   f();
+          //   console.log("b," + b); //9
+          //   console.log("a," + a); //undefined
+          //   console.log("c," + c); //9
+          //   function f() {
+          //       var l =3
+          //     for (var i = 0; i < 10; i++) {
+          //       console.log(i);
+          //       console.log('vvvvv'+k);
+          //     }
+          //     console.log(a); //3
+          //     var a = (b = c = 9);
+          //     console.log(k);
+          //     console.log("a1," + a);
+          //     console.log("b1," + b);
+          //     console.log("c1," + c);
+          //   }
+
+      function cat(){
+        //   在构造函数内部定义的this的属性
+        // 如果没有返回值，就返回this（新对象）
+        // 即使有返回值，如果返回值类型是简单类型，那么会被忽略
+                this.age=12
+                this.name='oo'
+                this.runn =function(){
+                    console.log('runnnnnn....')
+                }
+      }
+      var a = new cat()//调用构造函数模式
+    //   如果是用new关键字+构造函数执行的话就触发了构造函数执行模式
+      a.runn()
+      console.log(a)
+
+    </script>
+  </body>
+</html>

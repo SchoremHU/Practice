@@ -7,6 +7,7 @@
         <title>Page Title</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./css.css">
+        <link type="image/x-icon" rel="shortcut icon" href="http://js.huyamin.com/images/favicon.ico">
     </head>
 
     <body>
@@ -41,7 +42,7 @@
                 'e': 'ele.com',
                 'r': 'renren.com',
                 't': 'tianya.com',
-                'y': 'youtube.com',
+                'y': 'youdao.com',
                 'u': 'uc.com',
                 'i': 'iqiyi.com',
                 'o': 'opera.com',
@@ -136,18 +137,20 @@
                 hash[key] = x
                 img2.src = 'http://' + x + '/favicon.ico'
                 img2.onerror = function (imgx) {
-                    imgx.target.src = '#'
+                    imgx.target.src = 'https://i.loli.net/2018/12/28/5c262e3c72099.png'
                 }
                 localStorage.setItem('localhash', JSON.stringify(hash))
             }
             return buttonx
         }
-
+    
     function createimage(domain) {
             var img = tag('img')
             if (domain) {
                 img.src = 'https://' + domain + '/favicon.ico'
-            } else {
+            } else if(domain){
+                img.src = 'https://' + domain + '/images/favicon.ico'
+            }else{
                 img.src = 'https://i.loli.net/2018/12/28/5c262e3c72099.png'
             }
             img.onerror = function (imgx) {
