@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   function cat() {
+      //     //   在构造函数内部定义的this的属性
+      //     // 如果没有返回值，就返回this（新对象）
+      //     // 即使有返回值，如果返回值类型是简单类型，那么会被忽略
+      //     // 如果返回值是一个引用类型（复杂类型，不包括null），那么新对象会被抛弃，返回引用类型
+      //     this.age = 12;
+      //     this.name = "oo";
+      //     this.runn = function() {
+      //       console.log("runnnnnn....");
+      //     };
+      //   }
+      //   var a = new cat(); //调用构造函数模式
+      //   //   如果是用new关键字+构造函数执行的话就触发了构造函数执行模式
+      //   a.runn();
+      //   console.log(a);
+
+      //   function f(s,b){
+      //       console.log('www'+s+'s'+b)
+      //       console.log(this)
+      //     //   console.log(this.name)
+      //   }
+      //   var un = {
+      //       name:'kkkk'
+      //   }
+      //   f.call(undefined,2,3)
+      //   console.log(k)
+
+      //   function btn(width, height, x, y) {
+      //     this.width = width;
+      //     this.height = height;
+      //     this.px = x;
+      //     this.py = y;
+      //   }
+      //   var b = new btn(100, 100, 30, 30);
+
+      //   var m = Math.min(10, 50, 6);
+      //   console.log(m);//3
+
+      //   var n = Math.min.apply(null,[10,2,8])
+      //   console.log(n)//2
+
+      //   var t = {};
+      //   t[0] = 1;
+      //   t[1] = true;
+      //   t[2] = "hhh";
+      //   t.length = 3;
+      //   var k =Array.prototype.slice.call(t,0)
+      //   console.log(k)//[1,true,"hhh"]
+      //   var m = [1, 2, 3];
+      //   t.slice();
+      //如果什么都不穿，默认从0开始截取到最后
+      //第一个参数：开始截取的位置
+      //第二个参数：街区结束的位置+1
+      // 借用slice方法，吧this指向t对象，那么slice方法就会返回t对象的对应数组
+
+      //   function dog(){
+      //       console.log(this)
+      //   }
+      //   dog()
+      //   var d = new dog()
+      //   dog.call(null)
+
+      // function Rea() {
+      //     if (arguments.length == 1) {
+      //         this.width = arguments[0];
+      //         this.height = arguments[0];
+      //     }
+      //     if (arguments.length > 1) {
+      //         this.width = arguments[0];
+      //         this.height = arguments[1];
+      //     }
+      //     this.toString = function () {
+      //         // console.log('width:'+this.width+',hright:'+this.height)
+      //         return "width:" + this.width + ",hright:" + this.height;
+      //     };
+      // }
+      // var r1 = new Rea(10);
+      // console.log(r1.toString());
+      // var r2 = new Rea(10, 3);
+      // console.log(r2.toString());
+
+/**********函数的递归调用***/
+/**********常规求和***/
+// var sum = 0,
+// n = 100;
+// for (var i = 1; i <= n; i++) {
+//     sum += i;
+// }
+// console.log(sum);//5050
+// /**********递归求和***/
+// function sumn(num) {
+//     //   递归一定要有一个结束自己的调用自己的出口
+//     if (num <= 1) {
+//         return num
+//     }
+//     // 实现函数自己调用自己
+//     return sumn(num - 1) + num;
+// }
+// console.log(sumn.call(undefined, 100))//5050
+
+// 函数明明表达式，fun相当于在函数内部添加一变量fun，fun指向函数本身
+// funn === arguments.callee
+// var f = function fun(){
+//     console.log('fun')
+// }
+// f.call()
+
+
+
+/*********求阶乘*/
+function factorial(num){
+    if(num==1){
+        return 1
+    }
+    return num * factorial(num-1)
+}
+console.log(factorial(10))//3628800
+
+/******** 求f(n)斐波那契数列 **/
+function fibonacci(n){
+    if(n==1){
+        return 1
+    }
+    if(n==0){
+        return 0
+    }
+    return fibonacci(n-1)+fibonacci(n-2)
+}
+console.log(fibonacci(10))//55
+
+
+
+    </script>
+  </body>
+</html>
