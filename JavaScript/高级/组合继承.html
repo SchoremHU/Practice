@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 父类
+      function animal(age, name) {
+        this.age = age;
+        this.name = name;
+        this, (food = ["水"]);
+      }
+      animal.prototype.run = function() {
+        console.log(this.name + "running");
+      };
+
+      // 子类
+      function cat(age, name) {
+        // animal(age,name)
+        animal.call(this, age, name);
+      }
+      cat.prototype = new animal();
+      cat.prototype.constructor = cat;
+      let c = new cat(111, "ddd");
+    </script>
+  </body>
+</html>
