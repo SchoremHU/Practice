@@ -8,7 +8,7 @@
   </head>
   <body>
     <script>
-        /*
+      /*
         **************************
         Array.prototype.sort
         可以对数组中的元素进行排序
@@ -20,7 +20,51 @@
         根据返回的 a-b 的值进行排序
 
 
-        */    
+        *************  map方法  *****
+        返回新数组
+        接受一个回调函数，回调函数三个参数：当前项，所索引项，操作的数组
+        不影响原数组
+        */
+
+      var t = [1, 2, 3, 4, 5, 6];
+      console.log(
+        t.map(function(value, key, array) {
+          return value * 2;
+        })
+      ); //[2, 4, 6, 8, 10, 12]
+      /*
+       *item:就是当前的选项
+       *index:当前选项的索引
+       *array:当前数组
+       *return:返回每个想项处理的结果
+       */
+      var m = [22, 33, 44, 55, "22", true];
+      m.forEach(function(value, key, array) {
+        console.log(key, value, array);
+      });
+      // var m = 0,
+      //   n = 19;
+      // add(m, n);
+
+      // function add(a, b) {
+      //   a++;
+      //   var c = a + b
+      //   return c;
+      // }
+
+
+      m.forEach(function(value){
+        console.log(value)
+      })
+      /****m=[]//不是最优的数据清零方法，这是新开辟了一个空数组的堆*///
+      m.length=0//可以直接让数组清空，而且数据类型不变
+      console.log(m)
+
+  // m = null;//对象如果不用了，立即设置为null，等待回收
+
+
+
+  
     </script>
   </body>
 </html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+        <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+              </ul>
+    <script>
+    //   function Dog() {
+    //     this.name = "yyy";
+    //     return;
+    //   }
+    //   var xxx = new Dog();
+
+    //   function foo(x) {
+    //     var tmp = 3;
+    //     return function(y) {
+    //       console.log(x + y + ++tmp);
+    //     };
+    //   }
+    //   var bar = foo(2);
+    //   console.log(bar);
+    //   bar(10);
+    //   console.log(bar);
+
+    //   let t = function(a) {
+    //     console.log(a);
+    //   };
+    //   (function(a) {
+    //     console.log(a);
+    //   })(8);
+
+      (function() {
+        //   模拟块级作用域
+      })();
+
+      /***错误案例***/
+    //   let lis = document.querySelectorAll('li')
+    //   console.log(lis)
+    //   for(let i=0;i<lis.length;i++){
+    //       lis[i].onclick=function(e){
+    //           console.log(i)
+    //       }
+    //   }
+
+    //   let lis = document.querySelectorAll("li");
+    //   console.log(lis);
+    //   for (let i = 0; i < lis.length; i++) {
+    //     (function(a) {
+    //       lis[a].onclick = function(e) {
+    //         console.log(a);
+    //       };
+    //     })(i);
+    //   }
+
+
+    //   工厂模式
+    // 创建是个对象 ，每个对象都有年龄。姓名，包run方法
+    function create(age,name){
+        let p = new Object()
+        p.age = 18
+        p.name = name
+        // p.run =function(){
+        //     console.log(p)
+        // }
+        return p
+    }
+    p.prototype.run = function(){
+
+    }
+    let c = create(19,'sss')
+    console.log(c)
+
+    </script>
+    
+  </body>
+</html>
