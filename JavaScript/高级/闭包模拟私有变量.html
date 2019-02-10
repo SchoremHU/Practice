@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function p() {
+            let age = 0//私有变量，只能通过getAge和setAge来调用变量
+            this.getAge = function () {
+                return age
+            }
+            this.setAge = function (a) {
+                age = a
+            }
+        }
+
+        let pp = new p()
+
+        pp.setAge(90)
+        console.log(pp.getAge())
+
+
+function p1(){
+    let age1 = 0
+    return{
+        get:function(){
+            return age1
+        },
+        set:function(num){
+            age1 = num
+        }
+    }
+}
+let p2 = p1()
+    p2.set(33)
+    console.log(p2.get())
+
+
+
+
+    </script>
+</body>
+</html>

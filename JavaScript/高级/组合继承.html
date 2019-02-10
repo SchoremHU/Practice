@@ -26,6 +26,25 @@
       cat.prototype = new animal();
       cat.prototype.constructor = cat;
       let c = new cat(111, "ddd");
+
+// 使用急用构造函数继承模式来构建对象的实例属性
+animal.call(this,age,name)
+// 寄生继承方法
+cat.prototype = inheritFrom(animal.prototype)
+let c1 = new cat(11,'name')
+// 寄生继承模式
+function inheritFrom(o){
+    let t = object(o)
+    t.constructor=cat
+    return  t
+}
+
+    //   原型继承方法
+    function  object(o){
+        function F(){}
+        F.prototype=o
+        return new F
+    }
     </script>
   </body>
 </html>
