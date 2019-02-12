@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var str ='1395555510000,mss,Date(1395555510000)'
+  var k =  eval(str.replace(/.*(Date\(\d+\)).*/g,'new $1'))
+  console.log(k)
+    </script>
+</body>
+</html>

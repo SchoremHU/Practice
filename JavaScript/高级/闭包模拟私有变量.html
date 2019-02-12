@@ -40,8 +40,20 @@ let p2 = p1()
     console.log(p2.get())
 
 
+function demo(){
+    var a = b = c = 9
+}
+demo.call()
+// console.log(a,b,c)
 
-
+let str = 'dfdfdsfsdfsdf2323e3d3d34f4f,333,444,ff4ff444'
+let reg = /\d+/g
+console.dir(reg)
+var k = reg.exec(str)
+console.log(k)
+    // while ( (k = reg.exec(str)) != null ){
+    //     console.log(k[0])
+    // }
     </script>
 </body>
 </html>

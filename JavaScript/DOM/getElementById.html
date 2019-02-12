@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">1p1</p>
+    <p id="p2">2p1</p>
+    <p id="p3">3p1</p>
+    <p id="p4">4p1</p>
+    <p id="p5">5p1</p>
+    <div id="tem"></div>
+
+    <script>
+    
+    let elementp2 = document.getElementById('p2')
+    console.log(elementp2)
+    
+    let ppppp = document.getElementsByTagName('p')
+    console.dir(ppppp)
+    for(let i = 0;i<ppppp.length;i++){
+        console.log(ppppp[i].innerHTML)
+       }
+
+       let d = document.querySelector('#p1')
+       d.onclick = function(){
+        alert('12121')
+       }
+    </script>
+</body>
+</html>

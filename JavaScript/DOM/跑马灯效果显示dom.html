@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>123456</title>
+</head>
+<body>
+    <script>
+    
+    // setInterval(function(){
+    //     let charArray = document.title.split('')
+    //     let lastChar = charArray.pop()
+    //     charArray.unshift(lastChar)
+    //     let newTitle = charArray.join('')
+    //     document.title = newTitle
+    // },500)
+
+    let intervalID = setInterval(function(){
+        let oldtitle = document.title
+        let lastchar = oldtitle.slice(oldtitle.length-1)
+        let beforedstr = oldtitle.slice(0,oldtitle.length-1)
+        document.title=lastchar+beforedstr
+    },500)
+    setTimeout(function(){
+        clearInterval(intervalID)
+        document.title = 55555
+    },5000)
+
+
+    
+    </script>
+</body>
+</html>
