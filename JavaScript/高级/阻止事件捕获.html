@@ -9,10 +9,33 @@
 <body>
     <div id = 'div'>
     <input type="button" value="按钮" id ='btn'>
+    <input type="text"id="txt">
+    <hr>
+    <form action="jl.huyamin.com">
+        <input type="text" id="txtname">
+        <input type="button" value="提交" id='btnname'>
+    </form>
 </div>
     <script>
+        window.onberforunload = function(){
+            return '1111111'
+        }
     let btn = document.getElementById('btn')
-    let pDiv = document.getElementById('div')
+    let btnname = document.getElementById('btnname')
+    let txtname = document.getElementById('txtname')
+    // let pDiv = document.getElementById('div')
+
+    btnname.onclick = function(e){
+        if(!txtname.value){
+            alert('12121')
+            return false
+        }
+    }
+    txt.onkeypress = function(e){
+        e =e || window.event
+        console.log(e.keyCode)
+        // if (e.keyCode )
+    }
     btn.onclick = function(){
         // e =e ||window.event
       alert('hhh')}
