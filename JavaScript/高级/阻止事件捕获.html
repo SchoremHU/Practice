@@ -25,12 +25,33 @@
     let txtname = document.getElementById('txtname')
     // let pDiv = document.getElementById('div')
 
-    btnname.onclick = function(e){
-        if(!txtname.value){
-            alert('12121')
-            return false
+    // btnname.onclick = function(e){
+    //     if(!txtname.value){
+    //         alert('12121')
+    //         return false
+    //     }
+    // }
+        if(btnname.addEventListener){
+            btnname.addEventListener('click',btnnameClickHander,false)
         }
-    }
+        else{
+
+            btnname.attachEvent('onclick',btnnameClickHander)
+            console.dir(btnname)
+        }
+        function btnnameClickHander(e){
+            e = e ||window.event
+            if(!txtname.value){
+                alert('不能为空')
+                if(e.preventDefault){
+                    e.preventDefault()
+                }else{
+                    e.returnValue = false
+                    console.dir(e)
+                }
+            }
+        }
+
     txt.onkeypress = function(e){
         e =e || window.event
         console.log(e.keyCode)
