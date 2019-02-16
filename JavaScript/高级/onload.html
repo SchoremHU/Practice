@@ -38,10 +38,10 @@
     
         </ul>
 <input type="text" placeholder="123" id="txt">
+<input type="text" id="txt2">
 
         <script>
         window.onload = function(){
-
             let txt = document.getElementById('txt')
             txt.onblur = function(){
                 if(!txt.value){
@@ -51,9 +51,7 @@
                     txt.style.borderColor = ''
                 }
             }
-
         }
-        
         </script>
   </body>
 </html>
